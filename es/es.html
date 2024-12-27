@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="language" content="english" />
+  <title>Jonatan Trigueros | Front-End Developer</title>
+  <meta name="description"
+    content="Jonatan Trigueros es un desarrollador front-end que crea sitios web y experiencias digitales accesibles, eficientes y visualmente atractivos para la web." />
+  <meta name="author" content="Jonatan Trigueros" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Jonatan Trigueros | Desarrollador Front-End" />
+  <meta property="og:description"
+    content="Jonatan Trigueros es un desarrollador front-end que crea sitios web y experiencias digitales accesibles, eficientes y visualmente atractivos para la web." />
+  <meta property="og:url" content="https://www.jonathantrigueros.com/" />
+  <meta property="og:image" content="https://www.jonathantrigueros.com/image" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Jonatan Trigueros | Desarrollador Front-End" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.jonathantrigueros.com/" />
+
+  <!-- Hreflang Tags -->
+  <link rel="alternate" hreflang="en" href="https://www.jonathantrigueros.com/" />
+  <link rel="alternate" hreflang="es" href="https://www.jonathantrigueros.com/es/" />
+
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <!-- Favicon and Mobile Icons -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="../assets/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Jonatan Trigueros | Desarrollador Front-End" />
+  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Saira:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <a href="../index.html">
+      <button class="header__language-toggle">
+        <span class="header__language header__language--toggle">En</span>
+        <span class="header__language">Es</span>
+      </button>
+    </a>
+    <button id="burguer" class="burguer" aria-label="Open navigation">
+      <div></div>
+      <div></div>
+      <div></div>
+    </button>
+    <nav class="header__navigation">
+      <ul class="header__navigation-list">
+        <li class="header__navigation-item">
+          <a href="./es.html" class="header__navigation-link">Inicio</a>
+        </li>
+        <li class="header__navigation-item">
+          <a href="#work" class="header__navigation-link">Proyectos</a>
+        </li>
+        <li class="header__navigation-item">
+          <a href="./es.html" class="header__navigation-link--logo">
+            <img src="../assets/images/about-me/monograma-alt.webp" alt="Pagina de inicio de Jonatan Trigueros Desarrollador Front-End"
+              class="header__navigation-logo" loading="lazy" />
+          </a>
+        </li>
+        <li class="header__navigation-item">
+          <a href="#about" class="header__navigation-link">Acerca de mí</a>
+        </li>
+        <li class="header__navigation-item">
+          <a href="#contact" class="header__navigation-link">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="header__color-schema-toggle" id="theme-tooggle-button">
+      <span class="material-symbols-outlined header__color-schema" id="header__color-schema--light">light_mode</span>
+      <span class="material-symbols-outlined header__color-schema header__color-schema--toggle"
+        id="header__color-schema--dark">dark_mode</span>
+    </button>
+  </header>
+
+  <aside class="mobile__navigation" id="mobile__navigation">
+    <button class="mobile__navigation-language-toggle">
+      <span class="mobile-navigation-language mobile-navigation-language--current">En</span>
+      <span class="mobile-navigation-language">Es</span>
+    </button>
+    <ul class="mobile__navigation-list">
+      <li class="mobile__navigation-item">
+        <a href="" class="mobile__navigation-link">Home</a>
+      </li>
+      <li class="mobile__navigation-item">
+        <a href="" class="mobile__navigation-link">Projects</a>
+      </li>
+      <li class="mobile__navigation-item">
+        <a href="" class="mobile__navigation-link">About me</a>
+      </li>
+      <li class="mobile__navigation-item">
+        <a href="" class="mobile__navigation-link">Contact me</a>
+      </li>
+    </ul>
+    <div class="mobile__navigation-contact-chanels">
+      <span class="mobile__navigation-contact-email">jonantantrigueros12@gmail.com</span>
+      <a href="https://www.linkedin.com/in/jonatan-trigueros/" class="mobile__navigation-contact-link">
+        <img src="./assets/images/social-networks/social-networks_linkedin.webp" alt="Link to my linkedin profile"
+          class="mobile__navigation-contact-social-icon" loading="lazy" />
+      </a>
+      <a href="https://github.com/jonatan-trigueros" class="mobile__navigation-contact-link">
+        <img src="./assets/images/social-networks/social-networks_github.webp" alt="Link to my github profile"
+          class="mobile__navigation-contact-social-icon" loading="lazy" />
+      </a>
+    </div>
+  </aside>
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero__presentation">
+        <div class="hero__presentation-main">
+          <span>Hola mundo, yo soy</span>
+          <h1 class="hero__presentation-title">jonatan <br>trigueros</h1>
+        </div>
+        <p class="hero__description">
+          Soy un <strong>desarrollador front-end</strong> dedicado con una sólida base en
+          HTML, CSS, JavaScript y bastante experiencia en WordPress y
+          Elementor, apasionado por crear sitios web hermosos, funcionales y
+          optimizados.
+          <br /><br />
+          Soy conocido por mi comunicación clara, adaptabilidad, dedicación al aprendizaje continuo y gestión efectiva del tiempo. Mi objetivo es combinar diseño y tecnología para crear experiencias web hermosas, eficientes y accesibles.
+          <br /><br />
+          Realmente me encanta crear cosas que se vean bien y funcionen igual de bien.
+          Mi objetivo es desarrollar mis habilidades y aprender de cada oportunidad que se me presente. Permíteme contarte un poco <i><a href="#about">más sobre mí</a></i> a continuación.
+        </p>
+        <div class="hero__buttons-social-wrapper--mobile">
+          <a href="https://www.linkedin.com/in/jonatan-trigueros/" class="hero__buttons-link">
+            <img src="../assets/images/social-networks/social-networks_linkedin.webp" alt="Enlace a  mi perfil de linkedin"
+              class="hero__buttons-social-icon" id="hero__buttons-linkedin--mobile" loading="lazy" />
+          </a>
+          <a href="https://github.com/jonatan-trigueros" class="hero__buttons-link">
+            <img src="../assets/images/social-networks/social-networks_github.webp" alt="Enlace a mi perfil de github"  
+              class="hero__buttons-social-icon" id="hero__buttons-github--mobile" loading="lazy" />
+          </a>
+        </div>
+        <div class="hero__buttons">
+          <a href="#work" class="hero__buttons-view-work">Mira mi trabajo</a>
+          <div class="hero__buttons-social-wrapper">
+            <a href="https://www.linkedin.com/in/jonatan-trigueros/" class="hero__buttons-link">
+              <img src="../assets/images/social-networks/social-networks_linkedin.webp" alt="Enlace a mi perfil de linkedin"
+                class="hero__buttons-social-icon" id="hero__buttons-linkedin" loading="lazy" />
+            </a>
+            <a href="https://github.com/jonatan-trigueros" class="hero__buttons-link">
+              <img src="../assets/images/social-networks/social-networks_github.webp" alt="Enlace a mi perfil de github"   
+                class="hero__buttons-social-icon" id="hero__buttons-github" loading="lazy" />
+            </a>
+            <a href="..." target="_blank" class="hero__buttons-link hero__buttons-link--resume">
+              <span class="material-symbols-outlined hero__buttons-resume-download-icon">docs</span>
+              <span class="material-symbols-outlined hero__buttons-resume-download-icon">download</span>
+              <span class="hero__buttons-resume-download-text">Mi resume</span>
+            </a>
+          </div>
+        </div>
+        <a href="#about" class="hero__image-link--mobile">
+          <img src="../assets/images/about-me/jonatan-trigueros-photo.jpg" alt="" class="hero__image hero__image--mobile"
+            loading="lazy" />
+        </a>
+      </div>
+      <a href="#about" class="hero__image-link">
+        <img src="../assets/images/about-me/jonatan-trigueros-photo.jpg" alt="" class="hero__image" loading="lazy" />
+      </a>
+    </section>
+
+    <section class="toolkit" id="toolkit">
+      <h2 class="toolkit__title">Mi kit de herramientas</h2>
+
+      <div class="toolkit__tools-wrapper toolkit__first-slider" id="toolkit__tools-wrapper">
+
+        <div class="toolkit__tool toolkit__tool--1">
+          <h3 class="toolkit__tool-title">HTML</h3>
+          <div class="toolkit__tool-expertise">
+            <div class="toolkit__tool-level">
+              <span>Beginner</span>
+              <span>Intermediate</span>
+              <span>Advanced</span>
+            </div>
+            <div class="toolkit__tool-level-indicator toolkit__tool-level-indicator--intermediate">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <img src="../assets/images/skills/html.webp" alt="" class="toolkit__tool-image" loading="lazy" />
+        </div>
+
+        <div class="toolkit__tool toolkit__tool--2">
+          <h3 class="toolkit__tool-title">CSS</h3>
+          <div class="toolkit__tool-expertise">
+            <div class="toolkit__tool-level">
+              <span>Beginner</span>
+              <span>Intermediate</span>
+              <span>Advanced</span>
+            </div>
+            <div class="toolkit__tool-level-indicator toolkit__tool-level-indicator--intermediate">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <img src="../assets/images/skills/css.webp" alt="" class="toolkit__tool-image" loading="lazy" />
+        </div>
+
+        <div class="toolkit__tool toolkit__tool--3">
+          <h3 class="toolkit__tool-title">JavaScript</h3>
+          <div class="toolkit__tool-expertise">
+            <div class="toolkit__tool-level">
+              <span>Beginner</span>
+              <span>Intermediate</span>
+              <span>Advanced</span>
+            </div>
+            <div class="toolkit__tool-level-indicator toolkit__tool-level-indicator--beginner">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <img src="../assets/images/skills/JavaScript.webp" alt="" class="toolkit__tool-image" loading="lazy" />
+        </div>
+
+        <div class="toolkit__tool toolkit__tool--4">
+          <h3 class="toolkit__tool-title">React</h3>
+          <div class="toolkit__tool-expertise">
+            <div class="toolkit__tool-level">
+              <span>Beginner</span>
+              <span>Intermediate</span>
+              <span>Advanced</span>
+            </div>
+            <div class="toolkit__tool-level-indicator toolkit__tool-level-indicator--beginner">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <img src="../assets/images/skills/react.webp" alt="" class="toolkit__tool-image" loading="lazy" />
+        </div>
+
+        <div class="toolkit__tool toolkit__tool--5">
+          <h3 class="toolkit__tool-title">Git - Github</h3>
+          <div class="toolkit__tool-expertise">
+            <div class="toolkit__tool-level">
+              <span>Beginner</span>
+              <span>Intermediate</span>
+              <span>Advanced</span>
+            </div>
+            <div class="toolkit__tool-level-indicator toolkit__tool-level-indicator--intermediate">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <img src="../assets/images/skills/git-github.webp" alt="" class="toolkit__tool-image" loading="lazy" />
+        </div>
+
+        <div class="toolkit__tool toolkit__tool--6">
+          <h3 class="toolkit__tool-title">WordPress</h3>
+          <div class="toolkit__tool-expertise">
+            <div class="toolkit__tool-level">
+              <span>Beginner</span>
+              <span>Intermediate</span>
+              <span>Advanced</span>
+            </div>
+            <div class="toolkit__tool-level-indicator toolkit__tool-level-indicator--advanced">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <img src="../assets/images/skills/wordpress.webp" alt="" class="toolkit__tool-image" loading="lazy" />
+        </div>
+
+        <div class="toolkit__tool toolkit__tool--7">
+          <h3 class="toolkit__tool-title">Elementor</h3>
+          <div class="toolkit__tool-expertise">
+            <div class="toolkit__tool-level">
+              <span>Beginner</span>
+              <span>Intermediate</span>
+              <span>Advanced</span>
+            </div>
+            <div class="toolkit__tool-level-indicator toolkit__tool-level-indicator--advanced">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <img src="../assets/images/skills/elementor.webp" alt="" class="toolkit__tool-image" loading="lazy" />
+        </div>
+
+        <div class="toolkit__tool toolkit__tool--8">
+          <h3 class="toolkit__tool-title">Figma</h3>
+          <div class="toolkit__tool-expertise">
+            <div class="toolkit__tool-level">
+              <span>Beginner</span>
+              <span>Intermediate</span>
+              <span>Advanced</span>
+            </div>
+            <div class="toolkit__tool-level-indicator toolkit__tool-level-indicator--intermediate">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <img src="../assets/images/skills/figma.webp" alt="" class="toolkit__tool-image" loading="lazy" />
+        </div>
+
+        <div class="toolkit__tool toolkit__tool--9">
+          <h3 class="toolkit__tool-title">Spline</h3>
+          <div class="toolkit__tool-expertise">
+            <div class="toolkit__tool-level">
+              <span>Beginner</span>
+              <span>Intermediate</span>
+              <span>Advanced</span>
+            </div>
+            <div class="toolkit__tool-level-indicator toolkit__tool-level-indicator--beginner">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <img src="../assets/images/skills/spline.png" alt="" class="toolkit__tool-image" loading="lazy" />
+        </div>
+
+        <div class="toolkit__tool toolkit__tool--10">
+          <h3 class="toolkit__tool-title">Accesibility</h3>
+          <div class="toolkit__tool-expertise">
+            <div class="toolkit__tool-level">
+              <span>Beginner</span>
+              <span>Intermediate</span>
+              <span>Advanced</span>
+            </div>
+            <div class="toolkit__tool-level-indicator toolkit__tool-level-indicator--intermediate">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <img src="../assets/images/skills/accesibility.webp" alt="" class="toolkit__tool-image" loading="lazy" />
+        </div>
+      </div>
+      <div class="controls">
+        <button class="controls__button" id="previous-toolkit">
+          <span class="material-symbols-outlined">
+            arrow_back_ios
+          </span>
+        </button>
+        <div class="pagination">
+          <div id="toolkit__pagination__1" class="toolkit-pagination__current"></div>
+          <div id="toolkit__pagination__2"></div>
+          <div id="toolkit__pagination__3"></div>
+        </div>
+        <button class="controls__button" id="next-toolkit">
+          <span class="material-symbols-outlined">
+            arrow_forward_ios
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <section class="work" id="work">
+      <h2 class="work__title">Mi trabajo</h2>
+      <article class="work__item work__item--1">
+        <div class="work__item-info">
+          <h2 class="work__item-title">Luces Guatemala</h2>
+          <h3 class="work__item-role">Diseñador / Desarrollador</h3>
+          <span class="work__item-date">October 2022 - May 2023</span>
+          <span>Tech: WordPress, Elementor PRO, CSS, WooCommerce </span>
+          <p class="work__item-description">
+            This is an online store designed to serve as a secondary sales channel for Luces Guatemala company. The
+            website is built with a responsive design, ensuring it adapts seamlessly to multiple devices, providing a
+            smooth shopping experience on desktops, tablets, and smartphones. Additionally, it is optimized for search
+            engines to improve visibility in search results and incorporates accelerated loading techniques for enhanced
+            performance
+          </p>
+          <div class="work__item-view-details">
+            <a href="https://lucesguatemala.com/" class="work__item-view-live" target="_blank">Ver en vivo
+              <span class="material-symbols-outlined">arrow_outward</span></a>
+            <button class="work__item-view-more" id="work__item--1_view-more">
+              <span>View more
+                <span class="material-symbols-outlined">add</span></span>
+            </button>
+            <button class="work__item-view-less" id="work__item--1_view-less">
+              <span>View less
+                <span class="material-symbols-outlined">remove</span></span>
+            </button>
+          </div>
+        </div>
+        <a href="https://lucesguatemala.com/" class="work__item-link">
+          <img src="../assets/images/mockup-luces-guatemala.png" alt="" class="work__item-image" loading="lazy" />
+        </a>
+        <div class="work__item-details" id="work__item--1_view-details">
+          <div class="work__item-details-presentation">
+            <h3>My role in this project</h3>
+            <p>
+              I designed this online store in Figma based on my client's
+              needs, typography, colors, custom features, etc. Once the design
+              was finished, I used the CMS Wordpress and Elementor PRO to
+              build and style it, I also used CSS to give it a custom style
+              that I couldn't achieve with the theme's own settings, then
+              using the Woocommerce plugin I put the online store into
+              operation by adding and optimizing products for SEO, I also
+              optimized the content of the pillar pages for search engines and
+              the site assets for accelerated loading, it currently ranks #1 -
+              #5 in search results related to market keywords. <br /><br />
+              In addition to making the necessary DNS configurations to
+              connect the previously purchased domain with the Hosting that
+              was not from the same provider, I was in charge of creating the
+              corporate emails and the necessary configurations to make the
+              connection with all the company's devices.
+              <br /><br />
+              Once the project was completed, I also participated in the
+              collection and analysis of Google Analytics and WooCommerce data
+              for marketing strategies. I have also worked frequently with the
+              owner of the company to carry out redesigns, updates and
+              optimizations of content, adding new features and maintenance.
+            </p>
+          </div>
+
+          <div class="work__item-details-tech">
+            <h3>Technologies</h3>
+            <img src="../assets/images/skills/wordpress.webp" alt="" class="work__item-tech-image" loading="lazy" />
+            <img src="../assets/images/skills/elementor.webp" alt="" class="work__item-tech-image" loading="lazy" />
+            <img src="../assets/images/skills/woocommerce.webp" alt="" class="work__item-tech-image" loading="lazy" />
+            <img src="../assets/images/skills/css.webp" alt="" class="work__item-tech-image" loading="lazy" />
+          </div>
+          <div class="work__item-details-style">
+            <h3>Styles</h3>
+            <div class="work__item-style-typography">
+              <div class="work__item-style-font work__item-style-font--1">
+                <span class="work__item-style-font_sample">AaBb</span>
+                <span class="work__item-style-font_name">Saira</span>
+              </div>
+            </div>
+            <div class="work__item-style-colors">
+              <div class="work__item-style-color1"><span class="work__item-details-style_color-code">#F0F0F0</span>
+              </div>
+              <div class="work__item-style-color2"><span class="work__item-details-style_color-code">#131313</span>
+              </div>
+              <div class="work__item-style-color3"><span class="work__item-details-style_color-code">#D70000</span>
+              </div>
+              <div class="work__item-style-color4"><span class="work__item-details-style_color-code">#3EAA54</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="work__item work__item--2">
+        <div class="work__item-info">
+          <h2 class="work__item-title">Hernandez LM</h2>
+          <h3 class="work__item-role">Diseñador / Desarrollador</h3>
+          <span class="work__item-date">January 2024 - March 2024</span>
+          <span>Tech: WordPress, Elementor PRO </span>
+          <p class="work__item-description">
+            Website designed to promote the landscaping services offered by Hernandez L&M Landscaping, company based in
+            Las Vegas. Built with a responsive design, the website ensures a seamless browsing experience across
+            multiple devices, from desktops to smartphones
+          </p>
+          <div class="work__item-view-details">
+            <a href="https://hernandezlm.com/" class="work__item-view-live" target="_blank">Ver en vivo
+              <span class="material-symbols-outlined">arrow_outward</span></a>
+            <button class="work__item-view-more" id="work__item--2_view-more"">
+              <span>View more
+                <span class=" material-symbols-outlined">add</span></span>
+            </button>
+            <button class="work__item-view-less" id="work__item--2_view-less">
+              <span>View less
+                <span class="material-symbols-outlined">remove</span></span>
+            </button>
+          </div>
+        </div>
+        <a href="https://hernandezlm.com/" class="work__item-link">
+          <img src="../assets/images/mockup-luces-guatemala.png" alt="" class="work__item-image" loading="lazy" />
+        </a>
+        <div class="work__item-details" id="work__item--2_view-details">
+          <div class="work__item-details-presentation">
+            <h3>My role in this project</h3>
+            <p>
+              I designed this website according to my client's needs, I made a proposal for styles, colors and fonts and
+              when I got the approval I proceeded to design it entirely in Figma, I used WordPress CMS and Elementor PRO
+              to build and style. I have optimized the assets of this website to achieve accelerated loading and the
+              content for search engines. I was in charge of creating the corporate emails and the necessary
+              configurations to connect the company's devices to said emails.
+            </p>
+          </div>
+
+          <div class="work__item-details-tech">
+            <h3>Technologies</h3>
+            <img src="../assets/images/skills/wordpress.webp" alt="" class="work__item-tech-image" loading="lazy" />
+            <img src="../assets/images/skills/elementor.webp" alt="" class="work__item-tech-image" loading="lazy" />
+          </div>
+          <div class="work__item-details-style">
+            <h3>Styles</h3>
+            <div class="work__item-style-typography work__item-style-font--1">
+              <div class="work__item-style-font">
+                <span class="work__item-style-font_sample">AaBb</span>
+                <span class="work__item-style-font_name">Cabinet Grotesk</span>
+              </div>
+              <div class="work__item-style-font work__item-style-font--2">
+                <span class="work__item-style-font_sample">AaBb</span>
+                <span class="work__item-style-font_name">Inter</span>
+              </div>
+            </div>
+            <div class="work__item-style-colors">
+              <div class="work__item-style-color1"><span class="work__item-details-style_color-code">#F1F8F2</span>
+              </div>
+              <div class="work__item-style-color2"><span class="work__item-details-style_color-code">#112217</span>
+              </div>
+              <div class="work__item-style-color3"><span class="work__item-details-style_color-code">#336842</span>
+              </div>
+              <div class="work__item-style-color4"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="work__item work__item--3">
+        <div class="work__item-info">
+          <h2 class="work__item-title">Lucky Shrub</h2>
+          <h3 class="work__item-role">Diseñador / Desarrollador</h3>
+          <span class="work__item-date">October 2024</span>
+          <span>Tech: HTML, CSS, JavaScript </span>
+          <p class="work__item-description">
+            This is my capstone project for the HTML and CSS in-depth certification program offered by Meta. The project
+            involves creating a simple yet functional webpage for a fictional garden design company called Lucky Shrub,
+            based in Arizona. This project is designed to showcase my proficiency in crafting well-structured HTML and
+            CSS code, with a focus on clean, semantic markup and responsive design principles. Through this work, I aim
+            to demonstrate my ability to create visually appealing and user-friendly web pages while adhering to best
+            practices in web development.
+          </p>
+          <div class="work__item-view-details">
+            <a href="..." class="work__item-view-live" target="_blank">Ver en vivo
+              <span class="material-symbols-outlined">arrow_outward</span>
+            </a>
+            <a href="..." class="work__item-view-live" target="_blank">View code
+              <img src="./assets/images/social-networks/social-networks_github--white.webp" alt=""
+                id="work__item-view-code">
+            </a>
+            <button class="work__item-view-more" id="work__item--3_view-more">
+              <span>View more
+                <span class="material-symbols-outlined">add</span></span>
+            </button>
+            <button class="work__item-view-less" id="work__item--3_view-less">
+              <span>View less
+                <span class="material-symbols-outlined">remove</span></span>
+            </button>
+          </div>
+        </div>
+        <a href="..." class="work__item-link">
+          <img src="../assets/images/mockup-luces-guatemala.png" alt="" class="work__item-image" loading="lazy" />
+        </a>
+        <div class="work__item-details" id="work__item--3_view-details">
+          <div class="work__item-details-presentation">
+            <h3>My role in this project</h3>
+            <p>
+              I designed this website according to my client's needs, I made a proposal for styles, colors and fonts and
+              when I got the approval I proceeded to design it entirely in Figma, I used WordPress CMS and Elementor PRO
+              to build and style. I have optimized the assets of this website to achieve accelerated loading and the
+              content for search engines. I was in charge of creating the corporate emails and the necessary
+              configurations to connect the company's devices to said emails.
+            </p>
+          </div>
+
+          <div class="work__item-details-tech">
+            <h3>Technologies</h3>
+            <img src="../assets/images/skills/html.webp" alt="" class="work__item-tech-image" loading="lazy" />
+            <img src="../assets/images/skills/css.webp" alt="" class="work__item-tech-image" loading="lazy" />
+            <img src="../assets/images/skills/JavaScript.webp" alt="" class="work__item-tech-image" loading="lazy" />
+          </div>
+          <div class="work__item-details-style">
+            <h3>Styles</h3>
+            <div class="work__item-style-typography">
+              <div class="work__item-style-font work__item-style-font--1">
+                <span class="work__item-style-font_sample">AaBb</span>
+                <span class="work__item-style-font_name">Inter</span>
+              </div>
+            </div>
+            <div class="work__item-style-colors">
+              <div class="work__item-style-color1"><span class="work__item-details-style_color-code">#EFEFEF</span>
+              </div>
+              <div class="work__item-style-color2"><span class="work__item-details-style_color-code">#131313</span>
+              </div>
+              <div class="work__item-style-color3"><span class="work__item-details-style_color-code">#D70000</span>
+              </div>
+              <div class="work__item-style-color4"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="education" id="education">
+      <h2 class="education__title">Education</h2>
+      <p class="education__description">
+        Since I started in the world of web development I have relied on
+        official documentation, online courses, YouTube and learning
+        platforms. All the knowledge I acquired was 100% self-taught and the
+        experience I accumulated is 100% practical, creating websites I
+        learned to create websites. <br /><br />
+        After reading and practicing and continuing reading and continuing
+        practicing, I learned to use different tools and technologies, I
+        learned to design, prototype, build and optimize websites. I did all
+        this in my free time because I always had a job to be responsible for.
+      </p>
+      <div class="education__timeline education__first-slider" id="education__timeline">
+        <div class="education__timeline-node">
+          <div class="education__timeline-textarea">
+            <h4 class="education__timeline-title">The Beginning of It All</h4>
+            <p class="education__timeline-description">While studying for my diversified degree, I also developed an
+              interest in computing and the internet. By October of that year, I earned a <i><strong>CCNA Cisco
+                  certification</strong></i>.</p>
+          </div>
+          <div class="education__timeline-node-interconector">
+            <span class="material-symbols-outlined">radio_button_checked</span>
+            <div>.</div>
+            <span class="material-symbols-outlined">radio_button_checked</span>
+          </div>
+          <div class="education__timeline-year"><span>2019</span></div>
+        </div>
+        <div class="education__timeline-node">
+          <div class="education__timeline-textarea">
+            <h4 class="education__timeline-title">My First Step into Web Development</h4>
+            <p class="education__timeline-description">Driven by my interest in programming and a friend’s
+              recommendation, I decided to pursue a path in web development. That’s when I discovered
+              <i><strong>WordPress</strong></i> and page builder plugins like <i><strong>Elementor</strong></i> and
+              <i><strong>Divi</strong></i>.
+            </p>
+          </div>
+          <div class="education__timeline-node-interconector">
+            <span class="material-symbols-outlined">radio_button_checked</span>
+            <div>.</div>
+            <span class="material-symbols-outlined">radio_button_checked</span>
+          </div>
+          <div class="education__timeline-year"><span>2021</span></div>
+        </div>
+        <div class="education__timeline-node">
+          <div class="education__timeline-textarea">
+            <h4 class="education__timeline-title">Taking It Seriously</h4>
+            <p class="education__timeline-description">The world of web development captivated me, and I dedicated all
+              my free time to learning more about it and improving my skills. Between 2021 and this year, I developed
+              new abilities. By then, I could already create basic <i><strong>websites from scratch</strong></i>, handle
+              <i><strong>domain setup</strong></i>, <i><strong>hosting</strong></i>, and <i><strong>DNS
+                  management</strong></i>.
+            </p>
+          </div>
+          <div class="education__timeline-node-interconector">
+            <span class="material-symbols-outlined">radio_button_checked</span>
+            <div>.</div>
+            <span class="material-symbols-outlined">radio_button_checked</span>
+          </div>
+          <div class="education__timeline-year"><span>2022</span></div>
+        </div>
+        <div class="education__timeline-node">
+          <div class="education__timeline-textarea">
+            <h4 class="education__timeline-title">No Turning Back</h4>
+            <p class="education__timeline-description">At this point, I was completely in love with web development. I
+              spent much of my free time continuing to learn. From 2022 to 2023, I mastered WordPress and my favorite
+              builder, Elementor PRO. I also learned a lot about <i><strong>CDNs</strong></i>, <i><strong>asset
+                  optimization</strong></i>, <i><strong>SEO</strong></i>, and <i><strong>Google services</strong></i>
+              like Search Console, Analytics, AdSense, and Tag Manager. I started using <i><strong>Figma</strong></i>
+              and got into the basics of <i><strong>user experience design</strong></i>, <i><strong>graphic
+                  design</strong></i>, and <i><strong>web design</strong></i>.</p>
+          </div>
+          <div class="education__timeline-node-interconector">
+            <span class="material-symbols-outlined">radio_button_checked</span>
+            <div>.</div>
+            <span class="material-symbols-outlined">radio_button_checked</span>
+          </div>
+          <div class="education__timeline-year"><span>2023</span></div>
+        </div>
+        <div class="education__timeline-node" id="coding-everything">
+          <div class="education__timeline-textarea">
+            <h4 class="education__timeline-title">Coding Everything</h4>
+            <p class="education__timeline-description">In January 2024, I set a main goal for myself: to master the
+              fundamental technologies of web development beyond WordPress. <i><strong>HTML</strong></i>,
+              <i><strong>CSS</strong></i>, and <i><strong>JavaScript</strong></i>, I was already somewhat familiar with
+              these technologies since I’d used them in some projects, CSS for customizing WordPress themes, JavaScript
+              for adding custom functions, and HTML wasn’t much of a challenge thanks to my experience using
+              <i><strong>DevTools</strong></i>.
+              <br><br>
+              I spent a lot of time reading documentation on <i><strong>MDN</strong></i>,
+              <i><strong>W3Schools</strong></i>, <i><strong>Google for Developers</strong></i>, and other platforms like
+              <i><strong>Coursera</strong></i>, I practiced extensively with exercises to master these technologies. By
+              late 2024, I feel I’ve gained solid skills in HTML, CSS, and JavaScript. I’ve built two complete websites
+              entirely from code, including this portfolio, along with all the exercises that helped me refine my
+              abilities.
+              <br><br>
+              Now, I’m aiming to learn <i><strong>React</strong></i> and <i><strong>other technologies</strong></i> to
+              become a full-fledged Front-End Developer.
+            </p>
+          </div>
+          <div class="education__timeline-node-interconector">
+            <span class="material-symbols-outlined">radio_button_checked</span>
+            <div>.</div>
+            <span class="material-symbols-outlined">radio_button_checked</span>
+          </div>
+          <div class="education__timeline-year"><span>2024</span></div>
+        </div>
+        <div class="education__timeline-node">
+          <div class="education__timeline-textarea">
+            <h4 class="education__timeline-title">What Lies Ahead</h4>
+            <p class="education__timeline-description">This is where I’ll list my future achievements.</p>
+          </div>
+          <div class="education__timeline-node-interconector">
+            <span class="material-symbols-outlined">radio_button_checked</span>
+            <div>.</div>
+            <span class="material-symbols-outlined">radio_button_checked</span>
+          </div>
+          <div class="education__timeline-year"><span>?</span></div>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="controls__button" id="previous-education">
+          <span class="material-symbols-outlined">
+            arrow_back_ios
+          </span>
+        </button>
+        <div class="pagination">
+          <div id="education__pagination__1" class="education-pagination__current"></div>
+          <div id="education__pagination__2"></div>
+          <div id="education__pagination__3"></div>
+          <div id="education__pagination__4"></div>
+          <div id="education__pagination__5"></div>
+          <div id="education__pagination__6"></div>
+        </div>
+        <button class="controls__button" id="next-education">
+          <span class="material-symbols-outlined">
+            arrow_forward_ios
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2 class="about__title">About me</h2>
+      <div class="about__content">
+        <div class="about__presentation">
+          <h3 class="about__subtitle">Who am I and where do I come from?</h3>
+          <p class="about__description">My name, you probably already know it. I'm 23 years old and I'm a dreamer
+            looking
+            for my next challenge. I was born, raised and currently live in a small town called Esquipulas located in
+            Guatemala. I started creating websites as an attempt to discover what to do with my life. At first they were
+            super simple and to be honest, quite ugly, but as I got more and more into this world, I fell in love with
+            it
+            more. That's right, I started to discover what to do with my life and I hit the nail on the head, I fell in
+            love
+            with software development.</p>
+
+          <img src="./assets/images/about-me/jonatan-trigueros-photo2.jpg" alt="" class="about__image-mobile"
+            loading="lazy" />
+
+          <h3 class="about__subtitle">My current goals</h3>
+          <p class="about__description">Currently my main goal is to continue learning, improve my skills, move forward
+            and
+            create to be a better developer every day. I want to continue creating accessible, beautiful, adaptable and
+            optimal web experiences.</p>
+          <h3 class="about__subtitle">And outside of code? Who am I when I'm not a developer?</h3>
+          <p class="about__description">When I'm not coding, learning, or testing ideas and technologies, I'm usually
+            enjoying the wonderful mountain landscapes of my hometown, riding Enduro with my friends on my dirt-bike,
+            or just riding through the radioactive streets of Moscow, fighting mutants and vandals for supplies and then
+            taking refuge in the <span class="metro">Metro</span>.</p>
+        </div>
+        <img src="./assets/images/about-me/jonatan-trigueros-photo2.jpg" alt="" class="about__image" loading="lazy" />
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="contact__info">
+        <h2 class="contact__title">Contact me</h2>
+        <p class="contact__description">Thank you for coming here! I hope you found what you've seen of my work
+          interesting and that you've been able to learn a little more about what I'm passionate about doing.
+          <br><br>
+          If you're curious to know more or think I could fit into your team, I'm available and open to new
+          opportunities. Don't hesitate to send me a message; I'll be happy to connect and chat about how I can
+          contribute to your projects. See you soon!
+        </p>
+        <div class="contact__social-network">
+          <a href="https://www.linkedin.com/in/jonatan-trigueros/" target="_blank">
+            <img src="./assets/images/social-networks/social-networks_linkedin.webp" alt="Link to linkedin profile"
+              class="contact__social-icon" loading="lazy" />
+          </a>
+          <a href="https://github.com/jonatan-trigueros/" target="_blank">
+            <img src="./assets/images/social-networks/social-networks_github.webp" alt="Link to github profile"
+              class="contact__social-icon" loading="lazy" />
+          </a>
+        </div>
+      </div>
+      <div class="contact__form-wrapper">
+        <form action="#" method="post" class="contact__form" name="contact" autocomplete="off" novalidate>
+          <div class="form-group">
+            <label for="name" aria-hidden="true">Name</label>
+            <input type="text" name="name" id="name" placeholder="Your name" required pattern="[A-Za-z\s]+"
+              title="Enter a valid name. Only letters and spaces are allowed.">
+          </div>
+
+          <div class="form-group">
+            <label for="email" aria-hidden="true">Email</label>
+            <input type="email" name="email" id="email" placeholder="Your email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message" aria-hidden="true">Message</label>
+            <textarea name="message" id="message" rows="12" placeholder="Say hello!" required></textarea>
+          </div>
+
+          <button type="submit" class="send">
+            Send Message
+          </button>
+        </form>
+
+      </div>
+    </section>
+
+    <script src="../scripts/scripts.js"></script>
+  </main>
+
+  <footer>
+    <p>
+      Designed entirely in <span>Figma</span> and coded in <span>Visual Studio Code</span> by yours truly. Built with
+      <span>HTML</span>, <span>CSS</span> and <span>Javascript</span>, deployed on <span>Hostinger</span>. Typography:
+      PPNeue Machina, Work Sans.
+    </p>
+  </footer>
+</body>
+
+</html>
