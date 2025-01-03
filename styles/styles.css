@@ -242,8 +242,8 @@ button:hover {
     padding: 0.25rem 0.5rem;
   }
 
-  .mobile-navigation-language--current,
-  .header__color-schema--current {
+  .mobile-navigation-language--toggle,
+  .header__color-schema--toggle {
     color: var(--bg-color);
     background-color: var(--text-color--1);
   }
@@ -1128,8 +1128,11 @@ button:hover {
 
 
   footer {
+    display: flex;
+    flex-flow: column nowrap;
     background-color: rgb(27, 32, 33);
     padding: 1.5rem;
+    gap: 1.5rem;
   }
 
   footer p {
@@ -1141,6 +1144,11 @@ button:hover {
   footer span {
     color: rgb(226, 226, 226);
     font-weight: 600;
+  }
+  .footer__link {
+    color: rgb(226, 226, 226);
+    text-decoration: underline;
+    font-weight: 500;
   }
 }
 
@@ -1468,7 +1476,7 @@ button:hover {
 
   .toolkit__tools-wrapper {
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: start;
     align-items: start;
     align-content: start;
     width: 100%;
@@ -1479,7 +1487,7 @@ button:hover {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    width: calc((100% - clamp(1.75rem, 0.8911rem + 1.3408vw, 2.5rem)) / 5.42);
+    width: calc((100% - clamp(1.75rem, 0.8911rem + 1.3408vw, 2.5rem)) / 7);
     gap: 10px;
   }
 
@@ -1496,7 +1504,7 @@ button:hover {
   .toolkit__tool-title {
     font-family: "Work Sans", serif;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 0.4274rem + 0.8939vw, 1.5rem);
     order: 2;
   }
 
@@ -1524,7 +1532,7 @@ button:hover {
 
   .toolkit__tool-level>span {
     flex: 0 1 auto;
-    font-size: clamp(0.6rem, -0.0781rem + 0.7942vw, 0.875rem);
+    font-size: clamp(0.5rem, 0.1564rem + 0.5363vw, 0.8rem);
     font-weight: 300;
   }
 
@@ -1627,7 +1635,8 @@ button:hover {
     margin: 0.5rem 0;
   }
 
-  .work__item-view-live {
+  .work__item-view-live,
+  .work__link {
     background-color: var(--text-color--1);
     color: var(--bg-color);
     text-decoration: none;
@@ -1638,7 +1647,13 @@ button:hover {
     padding: 0.625rem 1.5rem;
   }
 
-  .work__item-view-live>span {
+  /*Activar hasta que hayan mas de 3 proyectos*/
+  .work__link{
+    display: none;
+  }
+
+  .work__item-view-live>span,
+  .work__link>span {
     color: var(--bg-color);
     vertical-align: middle;
     margin-left: 0.5rem;
@@ -1911,7 +1926,7 @@ button:hover {
     overflow-x: auto;
     overflow-y: scroll;
     width: 100%;
-    margin: 0;
+    margin: 0 0 0 2rem;
     padding: 2rem;
 
   }
@@ -2126,9 +2141,12 @@ button:hover {
 
 
   footer {
+    display: flex;
+    flex-flow: column nowrap;
     width: 100%;
     background-color: rgb(27, 32, 33);
-    padding: 3rem 1.5rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
   }
 
   footer p {
@@ -2140,6 +2158,11 @@ button:hover {
   footer span {
     color: rgb(226, 226, 226);
     font-weight: 600;
+  }
+  .footer__link {
+    color: rgb(226, 226, 226);
+    text-decoration: underline;
+    font-weight: 500;
   }
 }
 
