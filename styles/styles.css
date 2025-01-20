@@ -178,7 +178,9 @@ button:hover {
   .header__language-toggle {
     display: none;
   }
-
+  .header__language-link {
+    display: none;
+  
   .burguer {
     display: flex;
     flex-flow: column nowrap;
