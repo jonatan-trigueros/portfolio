@@ -188,7 +188,7 @@ button:hover {
     border: 0;
     gap: 0.25rem;
     background-color: transparent;
-  
+
   }
 
   .burguer>div {
@@ -199,21 +199,25 @@ button:hover {
     transition: all 0.5s;
     transform-origin: left;
   }
+
   .burguer.active div:first-child {
     transform: rotate(43deg);
     background-color: #ff4d4d;
   }
+
   .burguer.active div:nth-child(2) {
     opacity: 0;
   }
+
   .burguer.active div:last-child {
     transform: rotate(-43deg);
     background-color: #ff4d4d;
   }
-  .mobile__navigation{
+
+  .mobile__navigation {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: start; 
+    justify-content: start;
     align-items: start;
     gap: 1.5rem;
     width: 100vw;
@@ -228,9 +232,11 @@ button:hover {
     z-index: 5;
     transition: all 0.5s;
   }
-  .mobile__navigation.open{
+
+  .mobile__navigation.open {
     transform: translateX(0);
   }
+
   .header__navigation .header__navigation-item {
     display: none;
   }
@@ -282,32 +288,38 @@ button:hover {
     color: var(--bg-color);
     background-color: var(--text-color--1);
   }
-  .mobile__navigation-item{
+
+  .mobile__navigation-item {
     display: block;
     font-size: 2rem;
     font-weight: 600;
     padding: 0.75rem 0;
   }
-  .mobile__navigation-link{
+
+  .mobile__navigation-link {
     color: var(--text-color--1);
     text-decoration: none;
   }
-  .mobile__navigation-contact-email{
+
+  .mobile__navigation-contact-email {
     width: 100%;
     font-size: 1.25rem;
     font-weight: 500;
     text-decoration: underline;
   }
-  .mobile__navigation-contact-chanels{
+
+  .mobile__navigation-contact-chanels {
     flex-flow: row wrap;
     justify-content: start;
     align-items: start;
     gap: 1.5rem;
   }
-  .mobile__navigation-contact-social-icon{
+
+  .mobile__navigation-contact-social-icon {
     width: 4rem;
     aspect-ratio: 1/1;
   }
+
   .hero,
   .hero__presentation {
     flex-flow: column nowrap;
@@ -1205,6 +1217,7 @@ button:hover {
     color: rgb(226, 226, 226);
     font-weight: 600;
   }
+
   .footer__link {
     color: rgb(226, 226, 226);
     text-decoration: underline;
@@ -1708,7 +1721,7 @@ button:hover {
   }
 
   /*Activar hasta que hayan mas de 3 proyectos*/
-  .work__link{
+  .work__link {
     display: none;
   }
 
@@ -2092,12 +2105,14 @@ button:hover {
   .about__description {
     margin-bottom: 1.25rem;
   }
-  .about__image-wrapper{
+
+  .about__image-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 1rem;
   }
+
   .about__image {
     display: inline-block;
     width: 100%;
@@ -2230,6 +2245,7 @@ button:hover {
     color: rgb(226, 226, 226);
     font-weight: 600;
   }
+
   .footer__link {
     color: rgb(226, 226, 226);
     text-decoration: underline;
