@@ -15,7 +15,7 @@
   <meta property="og:description"
     content="Jonatan Trigueros is a front-end developer who creates accessible, efficient, and visually appealing websites and digital experiences for the web." />
   <meta property="og:url" content="https://www.jonathantrigueros.com/" />
-  <meta property="og:image" content="https://www.jonathantrigueros.com/image" />
+  <meta property="og:image" content="https://www.jonathantrigueros.com/assets/images/og-image.png" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Jonatan Trigueros | Front-End Developer" />
 
@@ -90,11 +90,14 @@
     </button>
   </header>
 
-  <aside class="mobile__navigation" id="mobile__navigation">
-    <button class="mobile__navigation-language-toggle">
-      <span class="mobile-navigation-language mobile-navigation-language--current">En</span>
-      <span class="mobile-navigation-language">Es</span>
-    </button>
+  <aside class="mobile__navigation" id="mobile__navigation" aria-hidden="">
+    <a href="./es/es.html">
+      <button class="mobile__navigation-language-toggle">
+        <span class="mobile-navigation-language--toggle mobile-navigation-language--current">En</span>
+        <span class="mobile-navigation-language">Es</span>
+      </button>
+    </a>
+
     <ul class="mobile__navigation-list">
       <li class="mobile__navigation-item">
         <a href="" class="mobile__navigation-link">Home</a>
@@ -111,6 +114,7 @@
     </ul>
     <div class="mobile__navigation-contact-chanels">
       <span class="mobile__navigation-contact-email">jonantantrigueros12@gmail.com</span>
+
       <a href="https://www.linkedin.com/in/jonatan-trigueros/" class="mobile__navigation-contact-link">
         <img src="./assets/images/social-networks/social-networks_linkedin.webp" alt="Link to my linkedin profile"
           class="mobile__navigation-contact-social-icon linkedin-logo" loading="lazy" />
@@ -171,12 +175,12 @@
           </div>
         </div>
         <a href="#about" class="hero__image-link--mobile">
-          <img src="./assets/images/about-me/jonatan-trigueros-photo.jpg" alt="" class="hero__image hero__image--mobile"
+          <img src="./assets/images/about-me/jonatan-trigueros-photo.webp" alt="" class="hero__image hero__image--mobile"
             loading="lazy" />
         </a>
       </div>
       <a href="#about" class="hero__image-link">
-        <img src="./assets/images/about-me/jonatan-trigueros-photo.jpg" alt="" class="hero__image" loading="lazy" />
+        <img src="./assets/images/about-me/jonatan-trigueros-photo.webp" alt="" class="hero__image" loading="lazy" />
       </a>
     </section>
 
@@ -398,7 +402,7 @@
           </div>
         </div>
         <a href="https://lucesguatemala.com/" class="work__item-link">
-          <img src="./assets/images/mockup-luces-guatemala.png" alt="" class="work__item-image" loading="lazy" />
+          <img src="./assets/images/mockup-luces-guatemala.webp" alt="" class="work__item-image" loading="lazy" />
         </a>
         <div class="work__item-details" id="work__item--1_view-details">
           <div class="work__item-details-presentation">
@@ -480,7 +484,7 @@
           </div>
         </div>
         <a href="https://hernandezlm.com/" class="work__item-link">
-          <img src="./assets/images/mockup-luces-guatemala.png" alt="" class="work__item-image" loading="lazy" />
+          <img src="./assets/images/mockup-hernandez.webp" alt="" class="work__item-image" loading="lazy" />
         </a>
         <div class="work__item-details" id="work__item--2_view-details">
           <div class="work__item-details-presentation">
@@ -528,7 +532,7 @@
         <div class="work__item-info">
           <h2 class="work__item-title">Lucky Shrub</h2>
           <h3 class="work__item-role">Designer / Developer</h3>
-          <span class="work__item-date">October 2024</span>
+          <span class="work__item-date">November 2024</span>
           <span>Tech: HTML, CSS, JavaScript </span>
           <p class="work__item-description">
             This final project for Meta's "HTML and CSS in-depth" program consists of a functional website for Lucky Shrub, a fictional company in Arizona. It demonstrates my skills in semantic HTML and CSS, responsive design, and adherence to web development best practices.
@@ -552,7 +556,7 @@
           </div>
         </div>
         <a href="..." class="work__item-link">
-          <img src="./assets/images/mockup-luces-guatemala.png" alt="" class="work__item-image" loading="lazy" />
+          <img src="./assets/images/mockup-lucky.webp" alt="" class="work__item-image" loading="lazy" />
         </a>
         <div class="work__item-details" id="work__item--3_view-details">
           <div class="work__item-details-presentation">
@@ -754,21 +758,26 @@
             love
             with software development.</p>
 
-          <img src="./assets/images/about-me/jonatan-trigueros-photo2.jpg" alt="" class="about__image-mobile"
-            loading="lazy" />
-
-          <h3 class="about__subtitle">My current goals</h3>
-          <p class="about__description">Currently my main goal is to continue learning, improve my skills, move forward
-            and
-            create to be a better developer every day. I want to continue creating accessible, beautiful, adaptable and
-            optimal web experiences.</p>
-          <h3 class="about__subtitle">And outside of code? Who am I when I'm not a developer?</h3>
-          <p class="about__description">When I'm not coding, learning, or testing ideas and technologies, I'm usually
-            enjoying the wonderful mountain landscapes of my hometown, riding Enduro with my friends on my dirt-bike,
-            or just riding through the radioactive streets of Moscow, fighting mutants and vandals for supplies and then
-            taking refuge in the <span class="metro">Metro</span>.</p>
+            
+            <h3 class="about__subtitle">My current goals</h3>
+            <p class="about__description">Currently my main goal is to continue learning, improve my skills, move forward
+              and
+              create to be a better developer every day. I want to continue creating accessible, beautiful, adaptable and
+              optimal web experiences.</p>
+              <h3 class="about__subtitle">And outside of code? Who am I when I'm not a developer?</h3>
+              <p class="about__description">When I'm not coding, learning, or testing ideas and technologies, I'm usually
+                enjoying the wonderful mountain landscapes of my hometown, riding Enduro with my friends on my dirt-bike,
+                or just riding through the radioactive streets of Moscow, fighting mutants and vandals for supplies and then
+                taking refuge in the <span class="metro">Metro</span>.</p>
+                <div class="about__image-wrapper">
+                  <img src="./assets/images/about-me/jonatan-trigueros-photo1.webp" alt="" class="about__image"
+                    loading="lazy" />
+                                
+                  <img src="./assets/images/about-me/jonatan-trigueros-photo2.webp" alt="" class="about__image"
+                    loading="lazy" />
+                </div>
         </div>
-        <img src="./assets/images/about-me/jonatan-trigueros-photo2.jpg" alt="" class="about__image" loading="lazy" />
+
       </div>
     </section>
 

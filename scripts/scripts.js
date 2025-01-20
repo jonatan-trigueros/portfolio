@@ -248,3 +248,23 @@ document.getElementById("previous-education").addEventListener("click", () => {
       .classList.add("education-pagination__current");
   }
 });
+
+document.getElementById("burguer").onclick = () => {
+  const burguer = document.getElementById("burguer");
+  const mobileNav = document.getElementById("mobile__navigation");
+
+  burguer.classList.toggle("active");
+  mobileNav.classList.toggle("open");
+
+  if (burguer.classList.contains("active")) {
+    burguer.setAttribute("aria-label", "Close navigation");
+  } else {
+    burguer.setAttribute("aria-label", "Open navigation");
+  }
+
+  if (mobileNav.classList.contains("open")) {
+    mobileNav.setAttribute("aria-hidden", "false");
+  } else {
+    mobileNav.setAttribute("aria-hidden", "true");
+  }
+};

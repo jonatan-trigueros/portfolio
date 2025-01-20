@@ -36,6 +36,7 @@ html[data-theme="light"] {
   --text-color--2: rgba(27, 32, 33, 0.9);
   --box-shadow-color: rgba(27, 32, 33, 0.1);
   --soft-border-color: rgba(51, 51, 51, 0);
+  --semi-transparent-color: rgba(226, 226, 226, 0.7);
 }
 
 html[data-theme="dark"] {
@@ -44,6 +45,8 @@ html[data-theme="dark"] {
   --text-color--2: rgba(226, 226, 226, 0.9);
   --box-shadow-color: rgba(226, 226, 226, 0);
   --soft-border-color: rgba(51, 51, 51, 1);
+  --semi-transparent-color: rgba(27, 32, 33, 0.8);
+
 }
 
 html {
@@ -115,9 +118,7 @@ button:hover {
 }
 
 @media screen and (max-width: 1024px) {
-  aside {
-    display: none;
-  }
+
 
   .hero__image {
     display: none;
@@ -171,7 +172,7 @@ button:hover {
     top: 1.5rem;
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
     margin: 2rem 0;
-    z-index: 2;
+    z-index: 10;
   }
 
   .header__language-toggle {
@@ -187,6 +188,7 @@ button:hover {
     border: 0;
     gap: 0.25rem;
     background-color: transparent;
+  
   }
 
   .burguer>div {
@@ -197,7 +199,38 @@ button:hover {
     transition: all 0.5s;
     transform-origin: left;
   }
-
+  .burguer.active div:first-child {
+    transform: rotate(43deg);
+    background-color: #ff4d4d;
+  }
+  .burguer.active div:nth-child(2) {
+    opacity: 0;
+  }
+  .burguer.active div:last-child {
+    transform: rotate(-43deg);
+    background-color: #ff4d4d;
+  }
+  .mobile__navigation{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start; 
+    align-items: start;
+    gap: 1.5rem;
+    width: 100vw;
+    height: 100vh;
+    padding: 7rem 1.5rem;
+    background-color: var(--semi-transparent-color);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: 5;
+    transition: all 0.5s;
+  }
+  .mobile__navigation.open{
+    transform: translateX(0);
+  }
   .header__navigation .header__navigation-item {
     display: none;
   }
@@ -226,6 +259,8 @@ button:hover {
 
   .mobile__navigation-language-toggle {
     border-color: var(--text-color--1);
+    gap: 1.5rem;
+    padding: 0.25rem 0.5rem 0.25rem 0.25rem;
   }
 
   .header__color-schema-toggle>.material-symbols-outlined,
@@ -233,7 +268,7 @@ button:hover {
     font-size: 1.25rem;
   }
 
-  .mobile-navigation-language,
+  .mobile-navigation-language--toggle,
   .header__color-schema {
     color: var(--text-color--1);
     font-weight: 500;
@@ -247,7 +282,32 @@ button:hover {
     color: var(--bg-color);
     background-color: var(--text-color--1);
   }
-
+  .mobile__navigation-item{
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.75rem 0;
+  }
+  .mobile__navigation-link{
+    color: var(--text-color--1);
+    text-decoration: none;
+  }
+  .mobile__navigation-contact-email{
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  .mobile__navigation-contact-chanels{
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: start;
+    gap: 1.5rem;
+  }
+  .mobile__navigation-contact-social-icon{
+    width: 4rem;
+    aspect-ratio: 1/1;
+  }
   .hero,
   .hero__presentation {
     flex-flow: column nowrap;
@@ -1456,7 +1516,7 @@ button:hover {
   }
 
   .hero__image {
-    width: clamp(25rem, 2.095rem + 35.7542vw, 45rem);
+    width: clamp(25rem, 13.5475rem + 17.8771vw, 35rem);
     height: clamp(39rem, 34.6366rem + 6.8112vw, 42.81rem);
     object-fit: cover;
     border-radius: 1rem;
@@ -2010,13 +2070,17 @@ button:hover {
 
   .about__content {
     gap: 3rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
   }
 
   .about__presentation {
     flex-flow: column nowrap;
     justify-content: start;
     align-items: start;
-    width: 50%;
+    width: 100%;
     gap: 0.625rem;
   }
 
@@ -2028,9 +2092,16 @@ button:hover {
   .about__description {
     margin-bottom: 1.25rem;
   }
-
+  .about__image-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
   .about__image {
-    width: clamp(23.3125rem, -5.6051rem + 45.1397vw, 48.5625rem);
+    display: inline-block;
+    width: 100%;
+    aspect-ratio: 16/9;
     object-fit: cover;
     border-radius: 1rem;
     box-shadow: 0 10px 45px 0 var(--box-shadow-color);

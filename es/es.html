@@ -15,7 +15,7 @@
   <meta property="og:description"
     content="Jonatan Trigueros es un desarrollador front-end que crea sitios web y experiencias digitales accesibles, eficientes y visualmente atractivos para la web." />
   <meta property="og:url" content="https://www.jonathantrigueros.com/" />
-  <meta property="og:image" content="https://www.jonathantrigueros.com/image" />
+  <meta property="og:image" content="https://www.jonathantrigueros.com/assets/images/og-image.png" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Jonatan Trigueros | Desarrollador Front-End" />
 
@@ -90,27 +90,31 @@
     </button>
   </header>
 
-  <aside class="mobile__navigation" id="mobile__navigation">
-    <button class="mobile__navigation-language-toggle">
-      <span class="mobile-navigation-language mobile-navigation-language--current">En</span>
-      <span class="mobile-navigation-language">Es</span>
-    </button>
+  <aside class="mobile__navigation" id="mobile__navigation" aria-hidden="">
+    <a href="../index.html">
+      <button class="mobile__navigation-language-toggle">
+        <span class="mobile-navigation-language--toggle mobile-navigation-language--current">En</span>
+        <span class="mobile-navigation-language">Es</span>
+      </button>
+    </a>
+
     <ul class="mobile__navigation-list">
       <li class="mobile__navigation-item">
-        <a href="" class="mobile__navigation-link">Home</a>
+        <a href="./es.html" class="mobile__navigation-link">Inicio</a>
       </li>
       <li class="mobile__navigation-item">
-        <a href="" class="mobile__navigation-link">Projects</a>
+        <a href="#work" class="mobile__navigation-link">Mi trabajo</a>
       </li>
       <li class="mobile__navigation-item">
-        <a href="" class="mobile__navigation-link">About me</a>
+        <a href="#about" class="mobile__navigation-link">Acerca de mí</a>
       </li>
       <li class="mobile__navigation-item">
-        <a href="" class="mobile__navigation-link">Contact me</a>
+        <a href="#contact" class="mobile__navigation-link">Contáctame</a>
       </li>
     </ul>
     <div class="mobile__navigation-contact-chanels">
       <span class="mobile__navigation-contact-email">jonantantrigueros12@gmail.com</span>
+
       <a href="https://www.linkedin.com/in/jonatan-trigueros/" class="mobile__navigation-contact-link">
         <img src="./assets/images/social-networks/social-networks_linkedin.webp" alt="Link to my linkedin profile"
           class="mobile__navigation-contact-social-icon linkedin-logo" loading="lazy" />
@@ -168,12 +172,12 @@
           </div>
         </div>
         <a href="#about" class="hero__image-link--mobile">
-          <img src="../assets/images/about-me/jonatan-trigueros-photo.jpg" alt="" class="hero__image hero__image--mobile"
+          <img src="../assets/images/about-me/jonatan-trigueros-photo.webp" alt="" class="hero__image hero__image--mobile"
             loading="lazy" />
         </a>
       </div>
       <a href="#about" class="hero__image-link">
-        <img src="../assets/images/about-me/jonatan-trigueros-photo.jpg" alt="" class="hero__image" loading="lazy" />
+        <img src="../assets/images/about-me/jonatan-trigueros-photo.webp" alt="" class="hero__image" loading="lazy" />
       </a>
     </section>
 
@@ -396,7 +400,7 @@
           </div>
         </div>
         <a href="https://lucesguatemala.com/" class="work__item-link">
-          <img src="../assets/images/mockup-luces-guatemala.png" alt="" class="work__item-image" loading="lazy" />
+          <img src="../assets/images/mockup-luces-guatemala.webp" alt="" class="work__item-image" loading="lazy" />
         </a>
         <div class="work__item-details" id="work__item--1_view-details">
           <div class="work__item-details-presentation">
@@ -461,7 +465,7 @@
           </div>
         </div>
         <a href="https://hernandezlm.com/" class="work__item-link">
-          <img src="../assets/images/mockup-luces-guatemala.png" alt="" class="work__item-image" loading="lazy" />
+          <img src="../assets/images/mockup-hernandez.webp" alt="" class="work__item-image" loading="lazy" />
         </a>
         <div class="work__item-details" id="work__item--2_view-details">
           <div class="work__item-details-presentation">
@@ -533,7 +537,7 @@
           </div>
         </div>
         <a href="..." class="work__item-link">
-          <img src="../assets/images/mockup-luces-guatemala.png" alt="" class="work__item-image" loading="lazy" />
+          <img src="../assets/images/mockup-lucky.webp" alt="" class="work__item-image" loading="lazy" />
         </a>
         <div class="work__item-details" id="work__item--3_view-details">
           <div class="work__item-details-presentation">
@@ -712,8 +716,14 @@
             disfrutar de los maravillosos paisajes montañosos de mi ciudad natal, con mis amigos en salidas de Enduro,
             o simplemente recorrer las calles radiactivas de Moscú, luchando contra mutantes y vándalos por suministros y luego
             refugiándome en el <span class="metro">Metro</span>.</p>
+            <div class="about__image-wrapper">
+              <img src="../assets/images/about-me/jonatan-trigueros-photo1.webp" alt="" class="about__image"
+                loading="lazy" />
+                            
+              <img src="../assets/images/about-me/jonatan-trigueros-photo2.webp" alt="" class="about__image"
+                loading="lazy" />
+            </div>
         </div>
-        <img src="../assets/images/about-me/jonatan-trigueros-photo2.jpg" alt="" class="about__image" loading="lazy" />
       </div>
     </section>
 
