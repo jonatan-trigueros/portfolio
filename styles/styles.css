@@ -1351,7 +1351,7 @@ button:hover {
     align-items: center;
     width: 88.42%;
     max-width: 118.75rem;
-    height: clamp(5rem, 1.9rem + 3.6vw, 6.25rem);
+    height: 5rem;
     padding: 0 1.5rem;
     border: solid rgba(27, 32, 33, 0.09) 1px;
     border-radius: 1rem;
@@ -2248,14 +2248,24 @@ button:hover {
   }
 
   input[type="submit"] {
+    width: 50%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    width: fit-content;
     text-transform: uppercase;
     padding: 0.5rem 1rem;
     gap: 1rem;
+    background-color: rgba(27, 32, 33, 0);
+    border: solid rgb(27, 32, 33) 2px;
+    color: rgb(27, 32, 33);
+    font-weight: 600;
+    transition: all 0.4s;
+  }
+
+  input[type="submit"]:hover {
+    background-color: rgb(27, 32, 33);
+    color: rgb(207, 210, 205);
   }
 
   label {
