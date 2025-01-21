@@ -1101,9 +1101,21 @@ button:hover {
     border-radius: 0.75rem;
     margin: 1rem 0;
   }
-
+  .about__image-wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
   .about__image {
-    display: none;
+    display: inline;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 45px 0 var(--box-shadow-color);
   }
 
   .contact,
@@ -1158,11 +1170,22 @@ button:hover {
   .contact__form * {
     width: 100%;
   }
-
+  form{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+  }
+  .field{
+    width: 100%;
+  }
   textarea {
-    font-size: 1rem;
+    width: 100%;
+    font-size: 1.25rem;
     font-family: "Work Sans", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     padding: 1rem;
     resize: none;
     background-color: rgb(27, 32, 33);
@@ -1170,22 +1193,20 @@ button:hover {
     border-radius: 0.5rem;
     border: none;
   }
-
-  input[type="text"],
-  input[type="email"],
-  button[type="submit"] {
-    font-weight: 500;
+  input{
+    width: 100%;
+    font-weight: 400;
     font-family: "Work Sans", sans-serif;
     background-color: rgb(27, 32, 33);
     border: none;
     border-radius: 0.5rem;
-    height: 3.75rem;
+    height: 3rem;
     color: rgb(207, 210, 205);
     padding-left: 1rem;
     font-size: 1.25rem;
   }
 
-  button[type="submit"] {
+  input[type="submit"] {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -1195,6 +1216,7 @@ button:hover {
     padding: 0.5rem 1rem;
     gap: 1rem;
   }
+
 
   label {
     display: none;
@@ -1231,14 +1253,10 @@ button:hover {
   h1 {
     font-size: clamp(2rem, 0.0376rem + 7.285vw, 4.7rem);
   }
-
+  
+  
   .toolkit__tools-wrapper {
     width: 200%;
-  }
-
-  .hero__image.hero__image--mobile {
-    aspect-ratio: 13/9;
-    object-position: top;
   }
 
   .work__item-tech-image {
@@ -1284,6 +1302,13 @@ button:hover {
   .toolkit__second-slider {
     transform: translateX(calc(-100vw + 1.5rem));
   }
+  .about__image-wrapper{
+    flex-flow: row nowrap;
+  }
+  .about__image {
+    width: 50%;
+  }
+
 }
 
 @media screen and (min-width: 1025px) {
@@ -2109,15 +2134,16 @@ button:hover {
   }
 
   .about__image-wrapper {
-    width: 100%;
     display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
     justify-content: center;
     gap: 1rem;
   }
 
   .about__image {
-    display: inline-block;
-    width: 100%;
+    display: inline;
+    width: 50%;
     aspect-ratio: 16/9;
     object-fit: cover;
     border-radius: 1rem;
@@ -2185,11 +2211,22 @@ button:hover {
   .contact__form * {
     width: 100%;
   }
-
+  form{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+  }
+  .field{
+    width: 100%;
+  }
   textarea {
+    width: 100%;
     font-size: 1.25rem;
     font-family: "Work Sans", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     padding: 1rem;
     resize: none;
     background-color: rgb(27, 32, 33);
@@ -2197,22 +2234,20 @@ button:hover {
     border-radius: 0.5rem;
     border: none;
   }
-
-  input[type="text"],
-  input[type="email"],
-  button[type="submit"] {
-    font-weight: 500;
+  input{
+    width: 100%;
+    font-weight: 400;
     font-family: "Work Sans", sans-serif;
     background-color: rgb(27, 32, 33);
     border: none;
     border-radius: 0.5rem;
-    height: 3.75rem;
+    height: 3.25rem;
     color: rgb(207, 210, 205);
     padding-left: 1rem;
     font-size: 1.25rem;
   }
 
-  button[type="submit"] {
+  input[type="submit"] {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
