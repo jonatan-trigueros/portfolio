@@ -1,6 +1,97 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  }
+  const linkedinLogoColorToggle = (
+    linkedinLogo,
+    currentPath,
+    spanish,
+    basePath,
+    newPath
+  ) => {
+    linkedinLogo = document.querySelectorAll(".linkedin-logo");
+    linkedinLogo.forEach((logo) => {
+      currentPath = logo.getAttribute("src");
+      spanish = currentPath.startsWith("../");
+      basePath = spanish
+        ? "../assets/images/social-networks/"
+        : "./assets/images/social-networks/";
+      newPath =
+        currentPath === `${basePath}social-networks_linkedin.webp`
+          ? `${basePath}social-networks_linkedin--white.webp`
+          : `${basePath}social-networks_linkedin.webp`;
+      logo.setAttribute("src", newPath);
+    });
+  };
+  const githubLogoColorToggle = (
+    githubLogo,
+    currentPath,
+    spanish,
+    basePath,
+    newPath
+  ) => {
+    githubLogo = document.querySelectorAll(".github-logo");
+    githubLogo.forEach((logo) => {
+      currentPath = logo.getAttribute("src");
+      spanish = currentPath.startsWith("../");
+      basePath = spanish
+        ? "../assets/images/social-networks/"
+        : "./assets/images/social-networks/";
+      newPath =
+        currentPath === `${basePath}social-networks_github.webp`
+          ? `${basePath}social-networks_github--white.webp`
+          : `${basePath}social-networks_github.webp`;
+      logo.setAttribute("src", newPath);
+    });
+  };
+
+  const activeLightMode = () => {
+    document
+      .getElementById("header__color-schema--dark")
+      .classList.remove("header__color-schema--toggle");
+    document
+      .getElementById("header__color-schema--light")
+      .classList.add("header__color-schema--toggle");
+  };
+  const activeDarkMode = () => {
+    document
+      .getElementById("header__color-schema--light")
+      .classList.remove("header__color-schema--toggle");
+    document
+      .getElementById("header__color-schema--dark")
+      .classList.add("header__color-schema--toggle");
+  };
+
+  savedTheme === "dark" ? linkedinLogoColorToggle() : null;
+  savedTheme === "dark" ? githubLogoColorToggle() : null;
+  savedTheme === "dark" ? activeLightMode() : null;
+
+  const themeToggleButton = document.getElementById("theme-tooggle-button");
+themeToggleButton.addEventListener("click", () => {
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+  const newTheme = currentTheme === "light" ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+  linkedinLogoColorToggle();
+  githubLogoColorToggle();
+  currentTheme === "light" ? activeLightMode() : activeDarkMode();
+});
+
+document.getElementById("burguer").onclick = (burguer, mobileNav) => {
+ burguer = document.getElementById("burguer");
+ mobileNav = document.getElementById("mobile__navigation");
+
+  burguer.classList.toggle("active");
+  mobileNav.classList.toggle("open");
+
+  burguer.classList.contains("active") = true? burguer.setAttribute("aria-label", "Close navigation") : burguer.setAttribute("aria-label", "Open navigation");
+  mobileNav.classList.contains("open") = true? mobileNav.setAttribute("aria-hidden", "false") : mobileNav.setAttribute("aria-hidden", "true");
+};
+
+
 const viewMoreButton = document.querySelectorAll(".work__item-view-more");
 const viewLessButton = document.querySelectorAll(".work__item-view-less");
-
 viewMoreButton.forEach((button) => {
   button.addEventListener("click", () => {
     const id = button.id.split("-")[2];
@@ -12,7 +103,6 @@ viewMoreButton.forEach((button) => {
       .classList.add("expand");
   });
 });
-
 viewLessButton.forEach((button) => {
   button.addEventListener("click", () => {
     const id = button.id.split("-")[2];
@@ -24,67 +114,6 @@ viewLessButton.forEach((button) => {
       .classList.remove("expand");
   });
 });
-
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
-  document.documentElement.setAttribute("data-theme", savedTheme);
-}
-
-const themeToggle = document.getElementById("theme-tooggle-button");
-themeToggle.addEventListener("click", () => {
-  currentTheme = document.documentElement.getAttribute("data-theme");
-  newTheme = currentTheme === "light" ? "dark" : "light";
-  document.documentElement.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
-
-  const linkedinLogo = document.querySelectorAll(".linkedin-logo");
-  linkedinLogo.forEach((logo) => {
-    const currentPath = logo.getAttribute("src");
-    const spanish = currentPath.startsWith("../");
-    const basePath = spanish
-      ? "../assets/images/social-networks/"
-      : "./assets/images/social-networks/";
-    const newPath =
-      currentPath === `${basePath}social-networks_linkedin.webp`
-        ? `${basePath}social-networks_linkedin--white.webp`
-        : `${basePath}social-networks_linkedin.webp`;
-    logo.setAttribute("src", newPath);
-  });
-
-  const githubLogo = document.querySelectorAll(".github-logo");
-  githubLogo.forEach((logo) => {
-    const currentPath = logo.getAttribute("src");
-    const spanish = currentPath.startsWith("../");
-    const basePath = spanish
-      ? "../assets/images/social-networks/"
-      : "./assets/images/social-networks/";
-    const newPath =
-      currentPath === `${basePath}social-networks_github.webp`
-        ? `${basePath}social-networks_github--white.webp`
-        : `${basePath}social-networks_github.webp`;
-    logo.setAttribute("src", newPath);
-  });
-
-  if (currentTheme === "light") {
-    document
-      .getElementById("header__color-schema--light")
-      .classList.add("header__color-schema--toggle");
-    document
-      .getElementById("header__color-schema--dark")
-      .classList.remove("header__color-schema--toggle");
-  } else if (currentTheme === "dark") {
-    document
-      .getElementById("header__color-schema--dark")
-      .classList.add("header__color-schema--toggle");
-    document
-      .getElementById("header__color-schema--light")
-      .classList.remove("header__color-schema--toggle");
-  }
-});
-
-
-
-
 
 const tookitWrapper = document.getElementById("toolkit__tools-wrapper");
 
@@ -114,7 +143,6 @@ document.getElementById("next-toolkit").addEventListener("click", () => {
       .classList.add("toolkit-pagination__current");
   }
 });
-
 document.getElementById("previous-toolkit").addEventListener("click", () => {
   if (tookitWrapper.classList.contains("toolkit__third-slider")) {
     tookitWrapper.classList.remove("toolkit__third-slider");
@@ -194,7 +222,6 @@ document.getElementById("next-education").addEventListener("click", () => {
       .classList.add("education-pagination__current");
   }
 });
-
 document.getElementById("previous-education").addEventListener("click", () => {
   if (educationWrapper.classList.contains("education__sixth-slider")) {
     educationWrapper.classList.remove("education__sixth-slider");
@@ -249,43 +276,35 @@ document.getElementById("previous-education").addEventListener("click", () => {
   }
 });
 
-document.getElementById("burguer").onclick = () => {
-  const burguer = document.getElementById("burguer");
-  const mobileNav = document.getElementById("mobile__navigation");
+const btn = document.getElementById("button");
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault();
 
-  burguer.classList.toggle("active");
-  mobileNav.classList.toggle("open");
+  btn.value = "Sending...";
 
-  if (burguer.classList.contains("active")) {
-    burguer.setAttribute("aria-label", "Close navigation");
-  } else {
-    burguer.setAttribute("aria-label", "Open navigation");
-  }
+  const serviceID = "default_service";
+  const templateID = "template_g02lrgf";
 
-  if (mobileNav.classList.contains("open")) {
-    mobileNav.setAttribute("aria-hidden", "false");
-  } else {
-    mobileNav.setAttribute("aria-hidden", "true");
-  }
-};
-
-const btn = document.getElementById('button');
-
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
-
-   btn.value = 'Sending...';
-
-   const serviceID = 'default_service';
-   const templateID = 'template_g02lrgf';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
-    }, (err) => {
-      btn.value = 'Send Email';
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      btn.value = "Send Email";
+      alert("Sent!");
+    },
+    (err) => {
+      btn.value = "Send Email";
       alert(JSON.stringify(err));
-    });
+    }
+  );
 });
+
+
+});
+
+
+
+
+
+
+
+
+
