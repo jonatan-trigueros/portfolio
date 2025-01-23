@@ -297,6 +297,21 @@ document.getElementById("form").addEventListener("submit", function (event) {
   );
 });
 
+const customCursor = document.getElementById('custom-cursor');
+const heroImage = document.getElementById('hero__image-link');
+
+heroImage.addEventListener('mouseenter', () => {
+  customCursor.style.display = 'block';  
+});
+
+heroImage.addEventListener('mouseleave', () => {
+  customCursor.style.display = 'none';
+});
+
+heroImage.addEventListener('mousemove', (e) => {
+  customCursor.style.left = `${(e.pageX - 50)}px`;
+  customCursor.style.top = `${(e.pageY - 50)}px`;
+});
 
 });
 

@@ -94,8 +94,8 @@
   <aside class="mobile__navigation" id="mobile__navigation" aria-hidden="">
     <a href="../index.html">
       <button class="mobile__navigation-language-toggle">
-        <span class="mobile-navigation-language--toggle mobile-navigation-language--current">En</span>
-        <span class="mobile-navigation-language">Es</span>
+        <span class="mobile-navigation-language--toggle">En</span>
+        <span>Es</span>
       </button>
     </a>
 
@@ -170,7 +170,8 @@
               <img src="../assets/images/social-networks/social-networks_github.webp" alt="Enlace a mi perfil de github"
                 class="hero__buttons-social-icon github-logo" id="hero__buttons-github" loading="lazy" />
             </a>
-            <a href="https://jonathantrigueros.com/assets/docs/Jonatan_Trigueros_Resume.pdf" target="_blank" class="hero__buttons-link hero__buttons-link--resume">
+            <a href="https://jonathantrigueros.com/assets/docs/Jonatan_Trigueros_Resume.pdf" target="_blank"
+              class="hero__buttons-link hero__buttons-link--resume">
               <span class="material-symbols-outlined hero__buttons-resume-download-icon">docs</span>
               <span class="material-symbols-outlined hero__buttons-resume-download-icon">download</span>
               <span class="hero__buttons-resume-download-text">Mi resume</span>
@@ -182,9 +183,13 @@
             class="hero__image hero__image--mobile" loading="lazy" />
         </a>
       </div>
-      <a href="#about" class="hero__image-link">
+      <a href="#about" class="hero__image-link" id="hero__image-link">
         <img src="../assets/images/about-me/jonatan-trigueros-photo.webp" alt="" class="hero__image" loading="lazy" />
       </a>
+      <div id="custom-cursor">
+        <div class="rotate-area" style="background-image: url(../assets/images/rotate-area-spanish.webp);"></div>
+        <div class="arrow" style="background-image: url(../assets/images/arrow.webp);"></div>
+      </div>
     </section>
 
     <section class="toolkit" id="toolkit">
@@ -547,15 +552,15 @@
             responsivo, y mejores prácticas web.
           </p>
           <div class="work__item-view-details">
-            <a href="https://jonathantrigueros.com/lucky-shrub/" class="work__item-view-live" target="_blank">Ver en vivo
+            <a href="https://jonathantrigueros.com/lucky-shrub/" class="work__item-view-live" target="_blank">Ver en
+              vivo
               <span class="material-symbols-outlined">arrow_outward</span>
             </a>
-            <a href="https://github.com/jonatan-trigueros/lucky-shrub" class="work__item-view-live" target="_blank">Ver código
+            <a href="https://github.com/jonatan-trigueros/lucky-shrub" class="work__item-view-live" target="_blank">Ver
+              código
               <img src="../assets/images/social-networks/social-networks_github--white.webp" alt=""
-                id="work__item-view-code"
-                class="github-logo" loading="lazy"
-                >
-              
+                id="work__item-view-code" class="github-logo" loading="lazy">
+
             </a>
             <button class="work__item-view-more" id="work__item--3_view-more">
               <span>Ver más
@@ -574,15 +579,11 @@
           <div class="work__item-details-presentation">
             <h3>Mi rol en este proyecto</h3>
             <p>
-              Diseñé este sitio web según las necesidades de mi cliente, hice una propuesta de estilos, colores y
-              fuentes y
-              cuando obtuve la aprobación procedí a diseñarlo completamente en Figma, utilicé el CMS WordPress y
-              Elementor PRO
-              para construirlo y darle estilo. He optimizado los recursos de este sitio web para lograr una carga
-              acelerada y el
-              contenido para los motores de búsqueda. Me encargué de crear los correos electrónicos corporativos y las
-              configuraciones
-              necesarias para conectar los dispositivos de la empresa a dichos correos.
+              Diseñé y desarrollé este sitio web funcional como proyecto final del programa 'HTML and CSS in-depth' de
+              Meta. Utilicé HTML semántico y CSS para estructurar y dar estilo al contenido, asegurándome de seguir las
+              mejores prácticas web. Implementé un diseño responsivo que garantiza una experiencia de usuario óptima en
+              computadoras, tabletas y dispositivos móviles. Además, me enfoqué en optimizar la organización del código
+              y la estructura del sitio para facilitar su mantenimiento y futuras mejoras.
             </p>
           </div>
 
@@ -630,7 +631,8 @@
             <h4 class="education__timeline-title">El inicio de todo</h4>
             <p class="education__timeline-description">Mientras estudiaba para mi título diversificado, también
               desarrollé un interés por la informática y el internet. Para octubre de este año, obtuve una
-              <i><strong>certificación CCNA de Cisco</strong></i>.</p>
+              <i><strong>certificación CCNA de Cisco</strong></i>.
+            </p>
           </div>
           <div class="education__timeline-node-interconector">
             <span class="material-symbols-outlined">radio_button_checked</span>
@@ -681,7 +683,8 @@
               <i><strong>optimización de recursos</strong></i>, <i><strong>SEO</strong></i> y <i><strong>servicios de
                   Google</strong></i> como Search Console, Analytics, AdSense y Tag Manager. Comencé a usar
               <i><strong>Figma</strong></i> y me adentré en los conceptos básicos de <i><strong>diseño de experiencia de
-                  usuario</strong></i>, <i><strong>diseño gráfico</strong></i> y <i><strong>diseño web</strong></i>.</p>
+                  usuario</strong></i>, <i><strong>diseño gráfico</strong></i> y <i><strong>diseño web</strong></i>.
+            </p>
           </div>
           <div class="education__timeline-node-interconector">
             <span class="material-symbols-outlined">radio_button_checked</span>
@@ -774,7 +777,7 @@
             disfrutar de los maravillosos paisajes montañosos de mi ciudad natal, con mis amigos en salidas de Enduro,
             o simplemente recorrer las calles radiactivas de Moscú, luchando contra mutantes y vándalos por suministros
             y luego
-            refugiándome en el <span class="metro">Metro</span>.</p>
+            refugiándome en el <span class="metro">METRO</span>.</p>
           <div class="about__image-wrapper">
             <img src="../assets/images/about-me/jonatan-trigueros-photo1.webp" alt="" class="about__image"
               loading="lazy" />
@@ -808,7 +811,7 @@
         </div>
       </div>
       <div class="contact__form-wrapper">
-     
+
         <form id="form">
           <div class="field">
             <label for="from_name">from_name</label>
@@ -823,16 +826,15 @@
             <label for="message">message</label>
             <textarea name="message" id="message" rows="12" placeholder="Envíame un saludo!" required></textarea>
           </div>
-          <input type="submit" id="button" value="Send Email" >
+          <input type="submit" id="button" value="Send Email">
         </form>
-     
-     
+
+
       </div>
     </section>
 
     <script src="../scripts/scripts.js"></script>
-    <script type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
 
     <script type="text/javascript">
