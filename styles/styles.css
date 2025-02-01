@@ -2229,11 +2229,12 @@ button:hover {
 
   .about__image {
     display: inline;
-    width: 50%;
-    aspect-ratio: 16/9;
+    width: calc(100% / 3);
+    aspect-ratio: 3/2;
     object-fit: cover;
     border-radius: 1rem;
     box-shadow: 0 10px 45px 0 var(--box-shadow-color);
+    object-position: bottom;
   }
 
   .about__image-mobile {
