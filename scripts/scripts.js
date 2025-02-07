@@ -16,36 +16,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 250);
   };
   heroInfoColorChage();
-
-  const chargeInViewport = () => {
-    const sections = document.querySelectorAll(".toolkit, .education, .work, .contact, .about");
-
+  const chargeInViewport = (sections, links) => {
+    sections = document.querySelectorAll(".toolkit, .education, .work, .contact, .about");
+    links = document.querySelectorAll(".hero__buttons-view-work, .hero__description-about-link, .hero__image-link, .header__navigation-link,  .mobile__navigation-link");
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const elements = entry.target.querySelectorAll(".toolkit__title, .toolkit__tools-wrapper, .work__title, .work__item, .education__title, .education__description, .education__timeline, .about__title, .about__content, .contact__info, .contact__form-wrapper");
-          elements.forEach(element => {
-            element.style.display = "flex";
-          });
-          observer.unobserve(entry.target);
-        }
-        if (entry.isIntersecting && window.innerWidth <= 1024) {
-          const elements = entry.target.querySelectorAll(".toolkit__title, .toolkit__tools-wrapper, .work__title, .work__item, .education__title, .education__description, .education__timeline, .about__title, .about__content, .contact__info, .contact__form-wrapper, .controls");
+        if (entry.isIntersecting || (entry.isIntersecting && window.innerWidth <= 1024)) {
+          elements = entry.target.querySelectorAll(".toolkit__title, .toolkit__tools-wrapper, .work__title, .work__item, .education__title, .education__description, .education__timeline, .about__title, .about__content, .contact__info, .contact__form-wrapper");
           elements.forEach(element => {
             element.style.display = "flex";
           });
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.4 });
-
+      links.forEach(link => {
+        link.addEventListener("click", () => {
+          elements = document.querySelectorAll(".toolkit__title, .toolkit__tools-wrapper, .work__title, .work__item, .education__title, .education__description, .education__timeline, .about__title, .about__content, .contact__info, .contact__form-wrapper");
+          elements.forEach(element => {
+            element.style.display = "flex";
+          });
+        });
+      });
+    }, { threshold: 0.3 });
     sections.forEach(section => observer.observe(section));
   };
-
   chargeInViewport();
-
-
-
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme) {
     document.documentElement.setAttribute("data-theme", savedTheme);
@@ -92,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
       logo.setAttribute("src", newPath);
     });
   };
-
   const activeLightMode = () => {
     document
       .getElementById("header__color-schema--dark")

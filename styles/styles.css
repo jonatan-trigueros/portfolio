@@ -130,7 +130,9 @@ button:hover {
   .hero__image {
     display: none;
   }
-
+  .work__link{
+    display: none;
+  }
   h1 {
     font-size: clamp(2.1rem, 0.1556rem + 12.4444vw, 3.5rem);
   }
