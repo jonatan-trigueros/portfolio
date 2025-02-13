@@ -29,15 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
           observer.unobserve(entry.target);
         }
       });
-      links.forEach(link => {
-        link.addEventListener("click", () => {
-          elements = document.querySelectorAll(".toolkit__title, .toolkit__tools-wrapper, .work__title, .work__item, .education__title, .education__description, .education__timeline, .about__title, .about__content, .contact__info, .contact__form-wrapper");
-          elements.forEach(element => {
-            element.style.display = "flex";
-          });
+    }, { threshold: 0.3 });
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        elements = document.querySelectorAll(".toolkit__title, .toolkit__tools-wrapper, .work__title, .work__item, .education__title, .education__description, .education__timeline, .about__title, .about__content, .contact__info, .contact__form-wrapper");
+        elements.forEach(element => {
+          element.style.display = "flex";
         });
       });
-    }, { threshold: 0.3 });
+    });
     sections.forEach(section => observer.observe(section));
   };
   chargeInViewport();
